@@ -127,7 +127,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #1e252d;
+		background-color: #222034;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -172,7 +172,7 @@ input, select, textarea {
 		}
 
 	body {
-		color: #212931;
+		color: #222034;
 	}
 
 
@@ -4554,13 +4554,15 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: "Press Start 2P";
+			font-family: "Font Awesome 5 Free";
 			font-weight: 900;
 		}
 
 		#navPanelToggle:before {
+			/* NAV ICON */
 			content: '\f0c9';
 			margin-right: 0.5rem;
+			font-size: 1.1rem;
 		}
 
 		#navPanelToggle.alt {
@@ -4672,11 +4674,12 @@ input, select, textarea {
 				text-rendering: auto;
 				line-height: 1;
 				text-transform: none !important;
-				font-family: "Press Start 2P";
+				font-family: "Font Awesome 5 Free";
 				font-weight: 900;
 			}
 
 			#navPanel .close:before {
+				/* CROSS ICON */
 				content: '\f00d';
 				font-size: 1.25rem;
 			}
