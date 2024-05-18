@@ -36,27 +36,23 @@ footer, header, hgroup, menu, nav, section {
 
 /* HTML: <div class="loader"></div> */
 
-.loader-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #222034;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #222034;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it sits on top of other content */
 }
 
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid #Fff;
-  animation: loader 2s infinite ease;
+#loading-screen img {
+    width: 110px; /* Adjust the size as needed */
+    height: 110px; /* Adjust the size as needed */
 }
-
 body {
 	line-height: 1;
 }
@@ -3265,24 +3261,27 @@ input, select, textarea {
 
 		#wrapper > .bg {
 			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #212931;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/Website BG.jpg");
-			background-size: auto,								auto,														100% auto;
-			background-position: center,								center,														top center;
-			background-repeat: repeat,								no-repeat,													no-repeat;
-			background-attachment: scroll,								scroll,														scroll;
-			z-index: -1;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+    		background-image: url("/images/Website BG - Wide.jpg");
+			background-size: 100% auto; /* Adjust size to fit height */
+   			background-position: top left; /* Start position */
+    		background-repeat: repeat-x; /* Repeat horizontally */
+    		animation: moveBackground 150s linear infinite; 
 		}
 
-			#wrapper > .bg.fixed {
-				position: fixed;
-				width: 100vw;
-				height: 100vh;
-			}
+		@keyframes moveBackground {
+    		0% { transform: translateX(0); }
+    		100% { transform: translateX(-50%); } /* Moves the background left */
+		}
+
+		#wrapper > .bg.fixed {
+			position: fixed;
+			width: 200vw;
+			height: 100vh;
+		}
 
 		#wrapper.fade-in:before {
 			pointer-events: none;
@@ -3294,7 +3293,7 @@ input, select, textarea {
 			-webkit-transition-delay: 0.75s;
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
-			background: #1e252d;
+			background: #222034;
 			content: '';
 			display: block;
 			height: 100%;
@@ -3310,11 +3309,9 @@ input, select, textarea {
 		}
 
 		@media screen and (orientation: portrait) {
-
 			#wrapper > .bg {
-				background-size: auto,								auto,														auto 175%;
+				background-size: auto 175%;
 			}
-
 		}
 
 /* Intro */

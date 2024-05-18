@@ -19,9 +19,21 @@
 	
 	<body class="is-preload">
 
+			<!-- Loading Screen -->
+			<div id="loading-screen">
+				<img src="images/Throbber.gif" alt="Loading...">
+			</div>
+		
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
+
+				<script>
+					// JavaScript to hide the loading screen once the page has fully loaded
+					window.addEventListener('load', function() {
+						document.getElementById('loading-screen').style.display = 'none';
+					});
+				</script>
 
 				<!-- Intro -->
 					<div id="intro">
