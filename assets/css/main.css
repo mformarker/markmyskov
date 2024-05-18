@@ -34,7 +34,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-/* HTML: <div class="loader"></div> */
 
 #loading-screen {
     position: fixed;
@@ -50,8 +49,8 @@ footer, header, hgroup, menu, nav, section {
 }
 
 #loading-screen img {
-    width: 110px; /* Adjust the size as needed */
-    height: 110px; /* Adjust the size as needed */
+    width: 55px; /* Adjust the size as needed */
+    height: 55px; /* Adjust the size as needed */
 }
 body {
 	line-height: 1;
