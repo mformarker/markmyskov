@@ -3264,7 +3264,7 @@ input, select, textarea {
     		left: 0;
     		width: 100%;
     		height: 100%;
-    		background-image: url("/images/Website BG - Wide.jpg");
+    		background-image: url("../../images/Website BG - Wide.jpg");
 			background-size: 100% auto; /* Adjust size to fit height */
    			background-position: top left; /* Start position */
     		background-repeat: repeat-x; /* Repeat horizontally */
