@@ -102,7 +102,11 @@ input, select, textarea {
 	}
 
 	body {
-		-ms-overflow-style: scrollbar;
+		overflow: auto;
+		scrollbar-width: none; /* Firefox */
+	}
+	body::-webkit-scrollbar {
+		display: none; /* Chrome, Edge, Safari */
 	}
 
 	@media screen and (max-width: 480px) {
@@ -339,16 +343,16 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left-color: #cbdbfc;
+		border-left-color: #eeeeee;
 	}
 
 	code {
 		background: rgba(220, 220, 220, 0.25);
-		border-color: #cbdbfc;
+		border-color: #eeeeee;
 	}
 
 	hr {
-		border-bottom-color: #cbdbfc;
+		border-bottom-color: #eeeeee;
 	}
 
 /* Row */
